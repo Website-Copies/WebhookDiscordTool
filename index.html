@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KTVXHHN');</script>
+
+<link rel="stylesheet" href="css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/nouislider.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118752130-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-118752130-3');
+  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="img/dwt.png" type="image/x-icon">
+<title>Discord webhook tools - discord webhook sender, deleter, editor, info about webhooks</title>
+<meta name="description" content="With this site you can send messages to discord webhooks, edit their info or delte them easliy. Save and load your info wieh one click using save menu">
+<meta name="keywords" content="Discord webhook, discord webhook sender, discord webhook deleter, send, edit , delete, webhook, discord webhook sender online, discord webhook message sender, ">
+</head>
+<body class="light">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTVXHHN"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="preloader-background">
+<div class="preloader-wrapper big active">
+<div class="spinner-layer spinner-blue">
+<div class="circle-clipper left">
+<div class="circle"></div>
+</div><div class="gap-patch">
+<div class="circle"></div>
+</div><div class="circle-clipper right">
+<div class="circle"></div>
+</div>
+</div>
+</div>
+</div>
+<header>
+<ul class="sidenav" id="mobile-demo">
+<li><a href="#sender">Sender</a></li>
+<li><a href="#info">Webhook info</a></li>
+<li><a href="#editor">Webhook editor</a></li>
+<li><a class="dark-toggle" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Dark/light"><i class="material-icons left">brightness_4</i> Toggle Dark Mode</a></li>
+</ul>
+<div class="navbar-fixed">
+<nav>
+<div class="blue nav-wrapper">
+<div class="container">
+<a class="brand-logo hide-on-med-and-down">DiscordWebhookTools</a>
+<a class="brand-logo hide-on-large-only">DWT</a>
+<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+<ul class="right hide-on-med-and-down">
+<li><a href="#sender">Sender</a></li>
+<li><a href="#info">Webhook info</a></li>
+<li><a href="#editor">Webhook editor</a></li>
+<li><a class="dark-toggle" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Dark/light"><i class="material-icons left">brightness_4</i> Toggle Dark Mode</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<main>
+<div class="container" id="docs">
+<ul class="collapsible">
+<li>
+<div class="collapsible-header"><i class="material-icons">help_outline</i>intro</div>
+<div class="collapsible-body"><span>
+<div class="row">
+<div class="col s6 right-align">Go to setting on the chanell you want to cerate webhook</div>
+<div class="col s6"><img class="responsive-img materialboxed" src="https://i.imgur.com/d8ddziu.png" alt="ss1"></div>
+<div class="col s6 right-align">Go to integrations</div>
+<div class="col s6"><img class="responsive-img materialboxed" src="https://i.imgur.com/b0wnrds.png"></div>
+<div class="col s6 right-align">Click on create webhook</div>
+<div class="col s6"><img class="responsive-img materialboxed" src="https://i.imgur.com/XY2YxEe.png"></div>
+<div class="col s6 right-align">Click on copy webhook url to get it <br>
+optionally you can change default name of the webhook or default avatar</div>
+<div class="col s6"><img class="responsive-img materialboxed" src="https://i.imgur.com/Qo8Xr7h.png"></div>
+<div class="col s6 right-align">When nickname or avater is blank webhook will use default one</div>
+<div class="col s6"><img class="responsive-img materialboxed" src="https://i.imgur.com/VZ9Y3xu.png"></div>
+</div>
+</span></div>
+</li>
+<li>
+<div class="collapsible-header"><i class="material-icons">add</i>How to send embed message to discord webhook</div>
+<div class="collapsible-body"><span>
+<div class="row">
+<div class="col s6 right-align">Turn on the embed swith and experiment with inputs, example result is at screenshot</div>
+<div class="col s6"><img class="responsive-img materialboxed" src="https://i.imgur.com/KnwEsCk.png"></div>
+</div>
+</span></div>
+</li>
+<li>
+<div class="collapsible-header"><i class="material-icons">create</i>How to edit or delete a discord webhook</div>
+<div class="collapsible-body"><span>You can edit the webhook name avatar. enter the webhook url name you want to change to and optional you can puut avatar url to set it as default one
+<br>To <strong>delete a webhook</strong> check the delte webhook? checkbox and send message to delte it. Set slider to 0 if you only want to delete it wihout any message.
+</span></div>
+</li>
+</ul>
+<span onclick="hideHelpInit()" data-target="modal2">
+<a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">remove</i></a>
+Hide help
+</span>
+<div id="modal2" class="modal">
+<div class="modal-content">
+<h4>Do you want to remove tips forever?</h4>
+<p>warning (this is very long) you can get them back by clearing localstorage or entering site with incognito mode</p>
+</div>
+<div class="modal-footer">
+<a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="hideHelp()">OK</a>
+<a href="#!" class="modal-close waves-effect waves-red btn-flat">Close</a>
+</div>
+</div>
+</div>
+<div class="container" id="sender">
+<h1 class="header center blue-text">Webhook Sender</h1>
+<div class="row center">
+<div class="row">
+<form class="col s12">
+<div class="row">
+<div class="input-field col s6">
+ <input placeholder="can be blank" id="nickname" type="text" class="validate">
+<label for="nickname">nickname</label>
+</div>
+<div class="input-field col s6">
+<input id="avatar_url" type="text" class="validate">
+<label for="avatar_url">avatar url</label>
+</div>
+</div>
+<div class="switch">
+<span class="blue-text">Embed?</span><br>
+<label>
+Off
+<input type="checkbox" id="embed">
+<span class="lever"></span>
+On
+</label>
+</div>
+<div class="embed-builder">
+<div class="row">
+<form class="col s12">
+<div class="row">
+<div class="input-field col s6">
+<input id="title" type="text" class="validate">
+<label for="title">title</label>
+</div>
+<div class="input-field col s6">
+<input id="description" type="text" class="validate">
+<label for="description">description</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s6">
+<label for="color">color</label><br>
+<input class="validate" type="color" id="color" value="#ff0000" style="width: 100%; margin-top: 10px;">
+</div>
+<div class="input-field col s6">
+<input id="footer_text" type="text" class="validate">
+<label for="footer_text">footer text</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s6">
+<input id="footer_icon_url" type="text" class="validate">
+<label for="footer_icon_url">footer icon url</label>
+</div>
+<div class="input-field col s6">
+<input id="author" type="text" class="validate">
+<label for="author">author</label>
+</div>
+</div>
+</form>
+</div>
+</div>
+<br>
+<div class="switch">
+<span class="blue-text">TTS?</span><br>
+<label>
+Off
+<input type="checkbox" id="tts">
+<span class="lever"></span>
+On
+</label>
+</div>
+<div class="row">
+<div class="input-field col s12">
+<input id="message" type="text" class="validate">
+<label for="message">message</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+<input id="url" type="text" class="validate">
+<label for="url">webhook URL</label>
+</div>
+</div>
+</form>
+ </div>
+<form action="#">
+<p>
+<label>
+<input type="checkbox" class="filled-in" id="destroy" />
+<span>Delete webhook?</span>
+</label>
+</p>
+</form>
+<h4 class="center cyan-text">How many messages?</h4>
+<div id="slider"></div>
+</div>
+<div class="row center">
+<button class="btn waves-effect waves-light" type="submit" name="action" onclick="start()">Submit
+<i class="material-icons right">play_arrow</i>
+</button>
+</div>
+</div>
+<div class="parallax-container">
+<div class="parallax"><img src="img/bg1.jpg"></div>
+</div>
+<div class="container" id="info">
+<h1 class="header center blue-text">Webhook Info</h1>
+<div class="row">
+<div class="input-field col s12">
+<input id="url2" type="text" class="validate">
+<label for="url2">webhook URL</label>
+<div class="valign-wrapper">
+<button class="btn waves-effect waves-light col s4 l2" type="submit" name="action" onclick="getWebhookInfo()">Submit
+<i class="material-icons right">play_arrow</i>
+</button>
+</div>
+</div>
+</div>
+<div id="modal1" class="modal">
+<div class="modal-content">
+<h4>Webhook info</h4>
+<ul>
+<li id="wInfo1"></li>
+<li id="wInfo2"></li>
+<li id="wInfo3"></li>
+<li id="wInfo4"></li>
+<li id="wInfo5"></li>
+<li id="wInfo6"></li>
+</ul>
+</div>
+<div class="modal-footer">
+<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+</div>
+</div>
+</div>
+<div class="divider"></div>
+<div class="container" id="editor">
+<h1 class="header center blue-text">Webhook Editor</h1>
+<div class="row">
+<div class="input-field col s12">
+<input id="url3" type="text" class="validate">
+<label for="url3">webhook URL</label>
+<div class="input-field col s5">
+<input id="name3" type="text" class="validate">
+<label for="name3">name</label>
+</div>
+<div class="input-field col s5">
+<input id="avatar3" type="text" class="validate">
+<label for="avatar3">avatar</label>
+</div>
+<div>
+<button class="btn waves-effect waves-light col s4 l2 " type="submit" name="action" onclick="editWebhookInfo()">Submit
+<i class="material-icons right">play_arrow</i>
+</button>
+</div>
+</div>
+</div>
+<div class="fixed-action-btn toolbar">
+<a class="btn-floating btn-large red pulse">
+<i class="large material-icons">menu</i>
+</a>
+<ul class="">
+<li><a class="red waves-effect waves-light btn tooltipped" data-position="top" data-tooltip="Save" onclick="save()"><i class="material-icons">save</i></a></li>
+<li><a class="red waves-effect waves-light btn tooltipped" data-position="top" data-tooltip="Load" onclick="load()"><i class="material-icons">get_app</i></a></li>
+<li><a class="red waves-effect waves-light btn tooltipped" data-position="top" data-tooltip="Close"><i class="material-icons">close</i></a></li>
+</ul>
+</div>
+</main>
+<footer class="page-footer cyan">
+<div class="footer-copyright">
+<div class="container">
+Made by
+<a href="https://webhookdiscord.madarauchiha43.repl.co" class="kamikos">kamikos, Copied By Yokiro</a>
+</div>
+</div>
+</footer>
+<script src="js/nouislider.min.js"></script>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
